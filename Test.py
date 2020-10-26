@@ -2,10 +2,7 @@ import string
 import random
 import tldextract
 from class_mdp import Mot_de_Passe as mdp
-import tldextract
 url = input("Donnez l'URL  :")
-
-
 
 
 test = mdp(url)
