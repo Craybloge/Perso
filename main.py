@@ -11,7 +11,7 @@ test = mdp(url)
 
 print(test.nom_site)
 
-fenetre = tk.Tk()
-champ_label = tk.Label(fenetre,  text="wsh wsh les amis")
+fenetre = tkinter.Tk()
+champ_label = Label(fenetre,  text="wsh wsh les amis")
 champ_label.pack()
 fenetre.mainloop()
