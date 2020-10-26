@@ -19,7 +19,7 @@ class Mot_de_Passe:
         return nom_du_site.domain
 
     # on génère un mdp
-    def id_generator(self, size=32, lettre=string.ascii_uppercase + string.digits):
+    def id_generator(self, size=32, lettre=string.ascii_letters + string.digits + string.punctuation):
         return''.join(random.choice(lettre) for _ in range(size))
     # on stocke le mdp et le site sur un fichier csv
 
