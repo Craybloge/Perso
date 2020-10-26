@@ -18,3 +18,6 @@ save = {nom_du_site: id_generator()}
 print(nom_du_site)
 print(save[nom_du_site])
 
+yolo
+
+yolo 2
