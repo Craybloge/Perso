@@ -21,8 +21,8 @@ class Mot_de_Passe:
     # on génère un mdp
     def id_generator(self, size=32, lettre=string.ascii_letters + string.digits + string.punctuation):
         return''.join(random.choice(lettre) for _ in range(size))
+        
     # on stocke le mdp et le site sur un fichier csv
-
     def save(self):
         with open('stockagemdp.csv', 'a', newline="") as csvfile:
             writer = csv.writer(csvfile, delimiter=',')
