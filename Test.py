@@ -1,10 +1,13 @@
 import string
 import random
-nom_du_site = "https://www.amazon.com"
 
 
 def cherche_site():
     "fait des trucs compliqué puis nom_du_site ="
+    return ''
+
+
+nom_du_site = cherche_site()
 
 
 def id_generator(size=6, lettre=string.ascii_uppercase + string.digits):
