@@ -11,7 +11,7 @@ def cherche_site():
 
 
 mdp_amazon = mdp(nom_du_site)
-print(mdp_amazon.mdp)
+print(mdp_amazon.mdp, mdp_amazon.nom_site)
 # def id_generator(size=6, lettre=string.ascii_uppercase + string.digits):
 #     return''.join(random.choice(lettre) for _ in range(size))
 
