@@ -2,7 +2,8 @@ import string
 import random
 import tldextract
 from class_mdp import Mot_de_Passe as mdp
-url = "https://stackoverflow.com/questions/44021846/extract-domain-name-from-url-python"
+import tldextract
+url = input("Donnez l'URL  :")
 
 
 
