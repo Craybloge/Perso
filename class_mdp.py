@@ -20,7 +20,7 @@ class Mot_de_Passe:
         return''.join(random.choice(lettre) for _ in range(size))
 
     def save(self):  # on les stocke (ici par défaut mais on peut le faire à la demande)
-        with open('stockagemdp.csv', 'w', newline="") as csvfile:
+        with open('stockagemdp.csv', 'a', newline="") as csvfile:
             writer = csv.writer(csvfile, delimiter=',')
             writer.writerow([self.nom_site] + [self.mdp])
 
