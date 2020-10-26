@@ -6,14 +6,14 @@ import csv
 from class_mdp import Mot_de_Passe as mdp
 
 
-# ici on ajoute un mdp
+# ici on ajoute un mdp et on laisse une option temporaire pour skip l'ajout de mdp
 url = input("Donnez l'URL  :")
-test = mdp(url)
-print(test.nom_site)
+if url != "a":
+    test = mdp(url)
+    print(test.nom_site)
 
 
 # ici on initialise les listes
-liste2 = []
 listemdp = []
 
 
@@ -21,14 +21,9 @@ listemdp = []
 with open('stockagemdp.csv', newline="") as csvfile:
     liste = csv.reader(csvfile, delimiter=' ', quotechar='|')
 
-    # ici on ajoute les mdp à une liste
+    # ici on ajoute les mdp à une liste et on sépare le mdp et le nom du site pour les repérer
     for row in liste:
-        liste2.append(', '.join(row))
-
-# ici on sépare les mdp des sites pour pouvoir les repérer
-    for i in liste2:
-        i = i.split(',')
-        listemdp.append(i)
+        listemdp.append(', '.join(row).split(","))
 print(listemdp)
 
 
