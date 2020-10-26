@@ -1,8 +1,7 @@
 import string
 import random
 import tldextract
-import tkinter as tk
-import csv
+import tkinter
 from class_mdp import Mot_de_Passe as mdp
 
 
@@ -26,6 +25,7 @@ with open('stockagemdp.csv', newline="") as csvfile:
         listemdp.append(', '.join(row).split(","))
 print(listemdp)
 
+test = mdp(url)
 
 # on demande à l'utilisateur de quel site il veut le mdp et on lui affiche
 choix = input('choisissez le site dont vous voulez le mdp:')
@@ -34,7 +34,23 @@ for i in listemdp:
         print("voici le mdp:", i[1])
 
 
-fenetre = tk.Tk()
-champ_label = tk.Label(fenetre,  text="wsh wsh les amis")
-champ_label.pack()
+fenetre = tkinter.Tk()
+fenetre.title("Projet Dash Lane")
+
+screen_x = fenetre.winfo_screenwidth()
+screen_y = fenetre.winfo_screenheight()
+
+window_x = 400
+window_Y = 100
+
+
+posX = (screen_x) - (window_x) - 50
+posY = (screen_y) - (window_Y) - 100
+
+
+geo = "{}x{}+{}+{}".format(window_x, window_Y, posX, posY)
+
+fenetre.geometry(geo)
+
+
 fenetre.mainloop()
