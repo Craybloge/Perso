@@ -1,6 +1,6 @@
 import string
 import random
-nom_du_site = "amazon"
+nom_du_site = "https://www.amazon.com"
 
 
 def cherche_site():
