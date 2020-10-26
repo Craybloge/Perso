@@ -2,7 +2,7 @@ import string
 import random
 import tldextract
 from class_mdp import Mot_de_Passe as mdp
-
+import tldextract
 nom_du_site = "https://www.amazon.com"
 
 
