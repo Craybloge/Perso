@@ -1,16 +1,17 @@
 import string
 import random
 import tldextract
-import tkinter
+import tkinter as tk
 from class_mdp import Mot_de_Passe as mdp
 url = input("Donnez l'URL  :")
+url = ("twitter.com")
 
 
 test = mdp(url)
 
 print(test.nom_site)
 
-fenetre = Tk()
-champ_label = Label(fenetre,  text="wsh wsh les amis")
+fenetre = tk.Tk()
+champ_label = tk.Label(fenetre,  text="wsh wsh les amis")
 champ_label.pack()
 fenetre.mainloop()
