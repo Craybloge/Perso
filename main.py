@@ -3,8 +3,8 @@ import random
 import tldextract
 import tkinter
 from class_mdp import Mot_de_Passe as mdp
-# url = input("Donnez l'URL  :")
-url = ("twitter.com")
+url = input("Donnez l'URL  :")
+
 
 
 test = mdp(url)
