@@ -2,16 +2,14 @@ import string
 import random
 import tldextract
 from class_mdp import Mot_de_Passe as mdp
-import tldextract
 url = "https://stackoverflow.com/questions/44021846/extract-domain-name-from-url-python"
 
 
-def cherche_site(url):
-    nom_du_site = tldextract.extract(url)
-    return nom_du_site
 
 
-print(cherche_site(url))
+test = mdp(url)
+
+print(test.nom_site)
 
 
 # def id_generator(size=6, lettre=string.ascii_uppercase + string.digits):
