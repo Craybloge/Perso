@@ -1,9 +1,12 @@
-import string
-import random
-
-#mon test est terminé tu peux supprimer et faire un autre test si tu veux
-def id_generator(size=32, lettre=string.ascii_letters + string.digits + string.punctuation):
-    return''.join(random.choice(lettre) for _ in range(size))
-
-
-print(id_generator())
+phrase = input("choisissez une phrase:")
+n = int(input("choisissez un nombre:"))%26
+code = ""
+for i in range(len(phrase)):
+    if phrase[i] != " ":
+        if ord(phrase[i])+n > 122:
+            code += chr(ord(phrase[i])+n-26)
+        else:
+            code += chr(ord(phrase[i])+n)
+    else:
+        code += " "
+print(code)
