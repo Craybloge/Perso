@@ -35,17 +35,20 @@ for i in listemdp:
 fenetre = tkinter.Tk()
 fenetre.title("Projet Dash Lane")
 
+# dimension et placement de la fenetre
 screen_x = fenetre.winfo_screenwidth()
 screen_y = fenetre.winfo_screenheight()
-
 window_x = 400
 window_Y = 100
-
 posX = (screen_x) - (window_x) - 50
 posY = (screen_y) - (window_Y) - 100
-
 geo = "{}x{}+{}+{}".format(window_x, window_Y, posX, posY)
-
 fenetre.geometry(geo)
+
+
+# création de l'interieur de la fentre
+Entry_mdp = tkinter.Entry(fenetre, bd=3)
+Entry_mdp.pack()
+
 
 fenetre.mainloop()
