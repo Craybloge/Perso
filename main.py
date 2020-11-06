@@ -6,6 +6,10 @@ import csv
 from class_mdp import Mot_de_Passe as mdp
 
 
+def update_nom(*args):
+    nom.set(Entry_nom.get())
+
+
 # ici on ajoute un mdp et on laisse une option temporaire pour skip l'ajout de mdp
 url = input("Donnez l'URL  :")
 if url != "a":
@@ -45,10 +49,16 @@ posY = (screen_y) - (window_Y) - 100
 geo = "{}x{}+{}+{}".format(window_x, window_Y, posX, posY)
 fenetre.geometry(geo)
 
+nom = tkinter.StringVar()
 
 # création de l'interieur de la fentre
-Entry_mdp = tkinter.Entry(fenetre, bd=3)
-Entry_mdp.pack()
+nom.trace("w", update_nom)
+Entry_nom = tkinter.Entry(fenetre, bd=3, textvariable=nom)
+Entry_nom.pack()
 
 
 fenetre.mainloop()
+
+print(nom)
+print(nom)
+print(nom)
