@@ -1,4 +1,4 @@
-phrase = input("choisissez une phrase:")
+phrase = input("choisissez une phrase:").lower()
 n = int(input("choisissez un nombre:"))%26
 code = ""
 for i in range(len(phrase)):
